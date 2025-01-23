@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer", "AkkaGameServer\AkkaGameServer.csproj", "{26C17ED6-85CF-41AD-BE6A-41AB46ECB10B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer.API", "AkkaGameServer.API\AkkaGameServer.API.csproj", "{E800417C-441A-4372-A340-77B5AE3499FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer.Actors", "AkkaGameServer.Actors\AkkaGameServer.Actors.csproj", "{0C4C7D37-76AA-4293-8F1F-83BBE01A2B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer.Communication", "AkkaGameServer.Communication\AkkaGameServer.Communication.csproj", "{BC7ACA49-6316-4750-9BB7-934B142AB438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer.Models", "AkkaGameServer.Models\AkkaGameServer.Models.csproj", "{0B4C1B3D-33BE-4682-8DFD-AB077151515B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26C17ED6-85CF-41AD-BE6A-41AB46ECB10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C17ED6-85CF-41AD-BE6A-41AB46ECB10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C17ED6-85CF-41AD-BE6A-41AB46ECB10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C17ED6-85CF-41AD-BE6A-41AB46ECB10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E800417C-441A-4372-A340-77B5AE3499FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E800417C-441A-4372-A340-77B5AE3499FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E800417C-441A-4372-A340-77B5AE3499FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E800417C-441A-4372-A340-77B5AE3499FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4C7D37-76AA-4293-8F1F-83BBE01A2B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4C7D37-76AA-4293-8F1F-83BBE01A2B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4C7D37-76AA-4293-8F1F-83BBE01A2B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4C7D37-76AA-4293-8F1F-83BBE01A2B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7ACA49-6316-4750-9BB7-934B142AB438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7ACA49-6316-4750-9BB7-934B142AB438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7ACA49-6316-4750-9BB7-934B142AB438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7ACA49-6316-4750-9BB7-934B142AB438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4C1B3D-33BE-4682-8DFD-AB077151515B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4C1B3D-33BE-4682-8DFD-AB077151515B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4C1B3D-33BE-4682-8DFD-AB077151515B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4C1B3D-33BE-4682-8DFD-AB077151515B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
