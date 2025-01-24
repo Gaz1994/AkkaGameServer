@@ -1,37 +1,45 @@
 using AkkaGameServer.Actors;
+using AkkaGameServer.Actors.Actors;
 using AkkaGameServer.API;
 using AkkaGameServer.API.Communication;
+using AkkaGameServer.API.Communication.Incoming;
+using AkkaGameServer.API.Communication.Outgoing;
 using AkkaGameServer.API.Network;
 using AkkaGameServer.Communication.Incoming;
 using AkkaGameServer.Communication.Outgoing;
 using AkkaGameServer.Models.Player.Connection;
 using AkkaGameServer.Models.Rooms.Loading;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace AkkaGameServer;
 
 public static class DependencyUtils
 {
-    public static IServiceCollection AddGameSystem(this IServiceCollection services)
+    public static void RegisterDependencies(this IServiceCollection services)
     {
-        // Register ActorSystem - this will manage all actors globally
+        // Basic services
+        services.AddLogging();
+        services.AddSingleton<ILogger>(sp => sp.GetRequiredService<ILoggerFactory>().CreateLogger("Default"));
+    
+        // Actor system
         services.AddSingleton<ActorSystemProvider>();
+        services.AddSingleton<ActorResolver>();
 
-        // Register Network Components
-        services.AddSingleton<INetworkSender, NetworkManager>();
+        // Network and packets
+        //services.AddSingleton<NetworkManager>();
+        services.AddSingleton<ConnectionManager>(); 
+        services.AddSingleton<IOutgoingHandler, OutgoingHandler>();
         
-        // Register Outgoing Packets
         services.AddSingleton<IOutgoingPacket<PlayerConnectionResponse>, PlayerConnectOutgoingMessagePacket>();
         services.AddSingleton<IOutgoingPacket<RoomLoadResponse>, PlayerLoadRoomOutgoingMessagePacket>();
-
-        // Register base MessageHandler
-        services.AddSingleton<MessageHandler>();
-
-        // Register packet factories - these will get the correct actor reference based on connectionId
-        services.AddSingleton<IIncomingPacket, PlayerConnectIncomingMessagePacket>();
+        services.AddSingleton<IIncomingPacket, PlayerConnectionIncomingMessagePacket>();
         services.AddSingleton<IIncomingPacket, PlayerLoadRoomIncomingMessagePacket>(); 
         
-
-        return services;
+        services.AddSingleton<IIncomingHandler, IncomingHandler>();
+        
+    
+        // Server
+        services.AddSingleton<GameServer>();
     }
 }

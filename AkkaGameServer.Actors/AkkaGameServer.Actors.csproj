@@ -8,10 +8,13 @@
 
     <ItemGroup>
       <PackageReference Include="Akka" Version="1.5.37" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\AkkaGameServer.API\AkkaGameServer.API.csproj" />
       <ProjectReference Include="..\AkkaGameServer.Models\AkkaGameServer.Models.csproj" />
+      <ProjectReference Include="..\AkkaGameServer.Networking\AkkaGameServer.Networking.csproj" />
     </ItemGroup>
 
 </Project>

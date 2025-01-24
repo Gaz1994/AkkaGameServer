@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer.Communicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer.Models", "AkkaGameServer.Models\AkkaGameServer.Models.csproj", "{0B4C1B3D-33BE-4682-8DFD-AB077151515B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkkaGameServer.Networking", "AkkaGameServer.Networking\AkkaGameServer.Networking.csproj", "{274A3339-6400-4EC1-9FDB-4F1F0863B917}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{0B4C1B3D-33BE-4682-8DFD-AB077151515B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B4C1B3D-33BE-4682-8DFD-AB077151515B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B4C1B3D-33BE-4682-8DFD-AB077151515B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{274A3339-6400-4EC1-9FDB-4F1F0863B917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{274A3339-6400-4EC1-9FDB-4F1F0863B917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{274A3339-6400-4EC1-9FDB-4F1F0863B917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{274A3339-6400-4EC1-9FDB-4F1F0863B917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

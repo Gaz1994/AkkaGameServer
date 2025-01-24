@@ -7,9 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AkkaGameServer.Actors\AkkaGameServer.Actors.csproj" />
       <ProjectReference Include="..\AkkaGameServer.API\AkkaGameServer.API.csproj" />
-      <ProjectReference Include="..\AkkaGameServer.Models\AkkaGameServer.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DotNetty.Transport" Version="0.7.6" />
+      <PackageReference Include="WebSocketSharp" Version="1.0.3-rc11" />
     </ItemGroup>
 
 </Project>

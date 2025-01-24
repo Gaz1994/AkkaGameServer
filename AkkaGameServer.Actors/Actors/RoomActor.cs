@@ -1,6 +1,7 @@
 using System.Collections.Concurrent;
 using Akka.Actor;
 using AkkaGameServer.Models.Rooms.Loading;
+using Microsoft.Extensions.Logging;
 
 namespace AkkaGameServer.Actors.Actors;
 

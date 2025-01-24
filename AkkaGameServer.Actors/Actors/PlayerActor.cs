@@ -5,13 +5,14 @@ using AkkaGameServer.Models.Player.Connection;
 using AkkaGameServer.Models.Player.Movement;
 using AkkaGameServer.Models.Player.Rooms;
 using AkkaGameServer.Models.Rooms.Loading;
+using Microsoft.Extensions.Logging;
 
 namespace AkkaGameServer.Actors.Actors;
 
 public class PlayerActor : ReceiveActor
 {
     private readonly ConcurrentBag<Player> _players = [];
-
+    
     public PlayerActor(IActorRef roomActor)
     {
         Receive<PlayerConnectionData>(message =>
