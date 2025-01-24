@@ -25,7 +25,7 @@ public class PlayerConnectionIncomingMessagePacket : IIncomingPacket
 
     public async ValueTask Decode(INetworkClient client, string message) // no need to use message in this scenario...
     {
-        var connectionData = new PlayerConnectionData(client.ConnectionId); 
+        var connectionData = new PlayerConnectionCommand(client.ConnectionId); 
         var response = await _playerActor.Ask<PlayerConnectionResponse>(connectionData);
         await _outgoingPacket.Send(response, client.ConnectionId);
     }

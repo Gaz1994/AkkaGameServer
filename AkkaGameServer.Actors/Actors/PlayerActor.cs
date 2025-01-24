@@ -15,7 +15,7 @@ public class PlayerActor : ReceiveActor
     
     public PlayerActor(IActorRef roomActor)
     {
-        Receive<PlayerConnectionData>(message =>
+        Receive<PlayerConnectionCommand>(message =>
         {
             // some demo code. 
             var playerAlreadyConnected = _players.FirstOrDefault(x => x.ConnectionId == message.ConnectionId);
@@ -28,17 +28,17 @@ public class PlayerActor : ReceiveActor
             Sender.Tell(new PlayerConnectionResponse(message.ConnectionId, newPlayer));
         });
 
-        Receive<PlayerMoveData>(message =>
+        Receive<PlayerMoveCommand>(message =>
         {
             // empty for now...
         });
 
-        Receive<PlayerLoadRoom>(async message =>
+        Receive<PlayerLoadCommand>(async message =>
         {
             var findPlayer = _players.FirstOrDefault(x => x.PlayerId == message.PlayerId); 
             ArgumentNullException.ThrowIfNull(findPlayer);
 
-            var roomLoadData = new RoomLoadData(findPlayer, message.RoomId); 
+            var roomLoadData = new RoomLoadCommand(findPlayer, message.RoomId); 
             // Forward to room actor
             var result = await roomActor.Ask<RoomLoadResponse>(roomLoadData);
             

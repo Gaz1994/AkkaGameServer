@@ -11,7 +11,7 @@ public class RoomActor : ReceiveActor
     public RoomActor()
     {
         
-        Receive<RoomLoadData>(message =>
+        Receive<RoomLoadCommand>(message =>
         {
             var findRoom = _roomIds.FirstOrDefault(x => x == message.RoomId);
             if (findRoom == Guid.Empty)

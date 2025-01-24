@@ -27,7 +27,7 @@ public class PlayerLoadRoomIncomingMessagePacket : IIncomingPacket
 
     public async ValueTask Decode(INetworkClient client, string message)
     {
-        var roomLoadData = JsonConvert.DeserializeObject<PlayerLoadRoom>(message);
+        var roomLoadData = JsonConvert.DeserializeObject<PlayerLoadCommand>(message);
         var response = await _playerActor.Ask<RoomLoadResponse>(roomLoadData);
         await _outgoingPacket.Send(response, client.ConnectionId);  // Pass connectionId to Send
     }
