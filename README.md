@@ -47,9 +47,6 @@ The server has been tested with [`WebSocketSharp`](https://github.com/sta/websoc
 - The `connectionId` from incoming messages is no longer used. Instead, it is set within the backend for better practice.
 - This README file will be updated with more information as the project progresses.
 
-## Getting Started
-
-
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
