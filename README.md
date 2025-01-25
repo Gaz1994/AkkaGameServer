@@ -37,7 +37,7 @@ The server has been tested with [`WebSocketSharp`](https://github.com/sta/websoc
   - `{}` represents the message payload
 
 - Received: `1010|{"ConnectionId":"718304496c3f462ba6f62ede6580535d","Player":{"PlayerId":"647a7433-519a-4a44-ae95-15c4a4d90994","CurrentRoomId":"00000000-0000-0000-0000-000000000000","ConnectionId":"718304496c3f462ba6f62ede6580535d"}}`
-  - This is an example response with test data
+This is an example response with test data
 
 ## Notes
 
