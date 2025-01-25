@@ -2,9 +2,6 @@
 
 AkkaGameServer is an experimental game server built using **[Akka.NET](https://getakka.net/)**. The goal is to explore the capabilities of Akka.NET and create a basic foundation for a game server.
 
-## Architecture
-
-The server consists of the following key components:
 
 ## Network Layer
 
