@@ -6,14 +6,14 @@ AkkaGameServer is an experimental game server built using **[Akka.NET](https://g
 
 The server consists of the following key components:
 
-### Network Layer
+## Network Layer
 
 The network layer handles the underlying communication with clients. It supports the following libraries:
 
 - [WebSocketSharp](https://github.com/sta/websocket-sharp)
 - [DotNetty](https://github.com/Azure/DotNetty)
 
-### Messaging
+## Messaging
 
 The messaging system is designed to handle incoming and outgoing packets efficiently.
 
